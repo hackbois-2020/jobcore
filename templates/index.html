@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{title}} - Jobcore</title>
+		<!-- Dependencies -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+
+		<!-- App -->
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+	</head>
+	<body>
+		<h1>Welcome to Job Core!</h1>
+		<p>{{content.message}}</p>
+
+		<table id="job-table">
+			<thead>
+				<tr>
+					<th>Company</th><th>Hiring Status</th><th>Job Title</th><th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for job in jobs %}
+				<tr>
+					<td>{{ job.company }}</td>
+					<td>{{ job.status }}</td>
+					<td>{{ job.title }}</td>
+					<td>{{ job.salary }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		<!-- Dependencies -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" 
+			integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 
+			crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+
+		<!-- App -->
+		<script src="{{url_for('static', filename='js/app.js')}}"></script>
+	</body>
+</html>
