@@ -15,13 +15,13 @@
 		<h1>Welcome to Job Core!</h1>
 		<p>{{content.message}}</p>
 
-		<table id="job-table">
+		<table id="job-table",bgcolor="#d9d1d1">
 			<thead>
 				<tr>
 					<th>Company</th><th>Hiring Status</th><th>Job Title</th><th>Salary</th>
 				</tr>
 			</thead>
-			<tbody bgcolor="#d9d1d1">
+			<tbody>
 				{% for job in jobs %}
 				<tr>
 					<td>{{ job.company }}</td>
