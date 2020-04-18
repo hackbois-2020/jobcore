@@ -26,7 +26,7 @@ body {
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #E5DFDF;
 }
 
 .content {
