@@ -6,19 +6,19 @@ CREATE TABLE COMPANY(
 	CompanyName  VARCHAR(100) NOT NULL PRIMARY KEY UNIQUE,
 	Modified     DATETIME     NOT NULL,
 	HiringStatus ENUM('hiring', 'hiring freeze', 'offers rescinded')  NOT NULL,
-	Comment      VARCHAR(500)
+	Comment      VARCHAR(1024)
 );
 
 CREATE TABLE JOBDESCRIPTION (
     JobTitle            VARCHAR(50)   NOT NULL PRIMARY KEY UNIQUE,
     Salary              INT               NULL,
-    JobResponsibilities VARCHAR(100)       NULL,
+    JobResponsibilities TEXT(1048576)       NULL,
     TimeCommitment      INT               NULL,
     TypeOfContract      VARCHAR(50)       NULL,
     DateUpload          DATE          NOT NULL,
     ContractStart       DATE              NULL,
     ContactDuration     DATETIME          NULL,
-    Link                VARCHAR(2048)     NULL             UNIQUE,
+    Link                VARCHAR(2048)     NULL,
     CompanyName         VARCHAR(100)  NOT NULL,
     CONSTRAINT JobFK FOREIGN KEY (CompanyName)
         REFERENCES COMPANY (CompanyName),
