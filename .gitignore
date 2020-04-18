@@ -1,5 +1,12 @@
+# Cloud
+.azure/
+
+# Venv
 venv/
 __pycache__/
+
+# Keys
 cert.pem
 key.pem
+
 config.json
