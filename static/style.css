@@ -1,5 +1,5 @@
 html {
-	font-size: 12px;	
+	font-size: 12px;
 }
 
 body {
@@ -58,12 +58,10 @@ table, th, td{
 	}
 .job-title thead tr{
 		  display:block;
-	  
+
 }
 h1{
 	text-align: center;
 	font-family: Helvetica, Arial, sans-serif;
 	text-transform: capitalize;
 }
-
->>>>>>> 6737f532cf5c7550498118d8d35a8da6ce3857f5
