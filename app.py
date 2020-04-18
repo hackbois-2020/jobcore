@@ -7,8 +7,7 @@ def hello():
     content = {
             'message': 'Lorem ipsum lol'
     }
-
-    # company status title salary
+   # company status title salary
     jobs = [
             {
                 'company': 'Boing',
@@ -21,6 +20,81 @@ def hello():
                 'status': 'hiring freeze',
                 'title': 'shiftwere dev loper',
                 'salary': 100
-            }
+            },{
+                'company': 'Michaelsoft',
+                'status': 'hiring freeze',
+                'title': 'shiftwere dev loper',
+                'salary': 100
+                },{
+                    'company': 'Michaelsoft',
+                    'status': 'hiring freeze',
+                    'title': 'shiftwere dev loper',
+                    'salary': 100
+                    },{
+                        'company': 'Michaelsoft',
+                        'status': 'hiring freeze',
+                        'title': 'shiftwere dev loper',
+                        'salary': 100
+                        },{
+                            'company': 'Michaelsoft',
+                            'status': 'hiring freeze',
+                            'title': 'shiftwere dev loper',
+                            'salary': 100
+                            },{
+                                'company': 'Michaelsoft',
+                                'status': 'hiring freeze',
+                                'title': 'shiftwere dev loper',
+                                'salary': 100
+                                },{
+                                    'company': 'Michaelsoft',
+                                    'status': 'hiring freeze',
+                                    'title': 'shiftwere dev loper',
+                                    'salary': 100
+                                    },{
+                                        'company': 'Michaelsoft',
+                                        'status': 'hiring freeze',
+                                        'title': 'shiftwere dev loper',
+                                        'salary': 100
+                                        },{
+                                            'company': 'Michaelsoft',
+                                            'status': 'hiring freeze',
+                                            'title': 'shiftwere dev loper',
+                                            'salary': 100
+                                            },{
+                                                    'company': 'Michaelsoft',
+                                                    'status': 'hiring freeze',
+                                                    'title': 'shiftwere dev loper',
+                                                    'salary': 100
+                                                    }, {
+                                                            'company': 'Michaelsoft',
+                                                            'status': 'hiring freeze',
+                                                            'title': 'shiftwere dev loper',
+                                                            'salary': 100
+                                                            }, {
+                                                                    'company': 'Michaelsoft',
+                                                                    'status': 'hiring freeze',
+                                                                    'title': 'shiftwere dev loper',
+                                                                    'salary': 100
+                                                                    }, {
+                                                                            'company': 'Michaelsoft',
+                                                                            'status': 'hiring freeze',
+                                                                            'title': 'shiftwere dev loper',
+                                                                            'salary': 100
+                                                                            }, {
+                                                                                    'company': 'Michaelsoft',
+                                                                                    'status': 'hiring freeze',
+                                                                                    'title': 'shiftwere dev loper',
+                                                                                    'salary': 100
+                                                                                    }, {
+                                                                                            'company': 'Michaelsoft',
+                                                                                            'status': 'hiring freeze',
+                                                                                            'title': 'shiftwere dev loper',
+                                                                                            'salary': 100
+                                                                                            }, {
+                                                                                                    'company': 'Michaelsoft',
+                                                                                                    'status': 'hiring freeze',
+                                                                                                    'title': 'shiftwere dev loper',
+                                                                                                    'salary': 100
+                                                                                                    }, 
     ]
     return render_template('index.html', title='Home', content=content, jobs=jobs)
