@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 	</head>
 	<body>
-		<h1>Welcome to Job Core!</h1>
+		<h1>Welcome to Job Core!!</h1>
 		<p>{{content.message}}</p>
 
 		<table id="job-table">
@@ -29,7 +29,31 @@
 				{% endfor %}
 			</tbody>
 		</table>
+		<!--[Jay] Testing Things -->
+<br>
+		<p>A Collapsible:</p>
+		<button class="collapsible">Open Collapsible</button>
+			<div class="content">
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
 
+		<script>// Jay's Testing
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
 		<!-- Dependencies -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" 
 			integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 

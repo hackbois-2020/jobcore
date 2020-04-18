@@ -6,6 +6,38 @@ body {
 	max-width: 80em;
 	margin: 10px auto 20px auto;
 	padding: 0.5em;
+<<<<<<< HEAD
+	background-color: #D9D1D1;
+}
+
+
+/*[Jay] Testing out collapsable data for Company Name*/
+
+.collapsible {
+  background-color: #E5DFDF;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 60%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  width: 60%;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+=======
 	background-color: #d9d1d1;
 }
 
@@ -34,3 +66,4 @@ h1{
 	text-transform: capitalize;
 }
 
+>>>>>>> 6737f532cf5c7550498118d8d35a8da6ce3857f5
