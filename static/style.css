@@ -6,8 +6,8 @@ body {
 	max-width: 80em;
 	margin: 10px auto 20px auto;
 	padding: 0.5em;
-<<<<<<< HEAD
 	background-color: #D9D1D1;
+	font: Helvetica, Arial, sans-serif;
 }
 
 
@@ -43,7 +43,7 @@ body {
 
 table{
 	border-collapse: collapse;
-	font-famliy: Helvetica, Arial, sans-serif;
+
 }
 
 table, th, td{
