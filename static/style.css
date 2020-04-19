@@ -35,7 +35,6 @@ body {
   width: 60%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-<<<<<<< HEAD
   background-color: #f1f1f1;
 }
 
@@ -49,11 +48,7 @@ body {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 16px;
-}
-=======
-=======
->>>>>>> 899839fc83b2e5cc1e6dfc52bbd35d9b82b1f5b9
+  border-radius: 6px;
 	background-color: #d9d1d1;
 }
 
