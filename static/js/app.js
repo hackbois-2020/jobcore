@@ -44,9 +44,9 @@ function makeCompanyDropdown (company) {
     // Add job status
     if (company.HiringStatus === 'hiring') {
         console.log('HIRING')
-        collapsible.append('<span class="job-status hiring">Hiring</span>')
+        collapsible.append('<span class="tag hiring">Hiring</span>')
     } else if (company.HiringStatus === 'hiring freeze') {
-        collapsible.append('<span class="job-status freeze">Hiring Frozen</span>')
+        collapsible.append('<span class="tag freeze">Hiring Frozen</span>')
     }
 
     dropdown.find('.collapsible').click(function () {

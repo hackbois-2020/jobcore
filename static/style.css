@@ -10,8 +10,20 @@ body {
     font: Helvetica, Arial, sans-serif;
 }
 
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
 
-/*[Jay] Testing out collapsable data for Company Name*/
+/* clearfix hack to handle floats well. see
+   https://www.w3schools.com/howto/howto_css_clearfix.asp */
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* company dropdown */
 
 .company-dropdown {
     margin: 5px auto;
@@ -36,7 +48,7 @@ body {
     border-radius: 6px;
 }
 
-.company-dropdown .job-status {
+.tag {
     display: inline-block;
     float: right;
 
@@ -61,11 +73,18 @@ body {
     width: 100%;
 }
 
-h1 {
-    text-align: center;
-    text-transform: capitalize;
+/* job listing */
+
+.job-apply {
+    background-color: #6ba8a9;
+    text-decoration: none;
 }
 
+.job-apply img {
+    height: 1em;
+}
+
+/* templates */
 .template {
     display: none;
 }
