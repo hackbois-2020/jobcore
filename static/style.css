@@ -1,74 +1,72 @@
 html {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 body {
-	max-width: 80em;
-	margin: 10px auto 20px auto;
-	padding: 0.5em;
-	background-color: #D9D1D1;
-	font: Helvetica, Arial, sans-serif;
+    max-width: 80em;
+    margin: 10px auto 20px auto;
+    padding: 0.5em;
+    background-color: #D9D1D1;
+    font: Helvetica, Arial, sans-serif;
 }
 
 
 /*[Jay] Testing out collapsable data for Company Name*/
 
 .company-dropdown {
-    padding: 5px;
-    width: 50em;
+    margin: 5px auto;
+    width: 80em;
+    background-color: #E5DFDF;
+}
+
+.company-dropdown > * {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .collapsible {
-  background-color: #E5DFDF;
-  color: black;
-  cursor: pointer;
-  padding: 5px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-  border-radius: 6px;
-}
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
 
-.active, .collapsible:hover {
-  background-color: #E5DFDF;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    border-radius: 6px;
 }
 
 .content {
-  padding: 0 18px;
-  max-height: 0;
-  width: 100%;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+    display: none;
+    padding: 0 15px;
+    width: 100% !important;
 }
 
 .button {
-  text-align: center;
-  background-color: #ddd;
-  border: none;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 6px;
-	background-color: #d9d1d1;
-  border-radius: 6px;
+    text-align: center;
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #d9d1d1;
+    border-radius: 6px;
 }
 
 
 table, th, td {
-	border: 1px solid black;
-	background-color: #d9d1d1;
+    border: 1px solid black;
+    background-color: #d9d1d1;
 }
 
 h1 {
-	text-align: center;
-	text-transform: capitalize;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 

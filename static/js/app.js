@@ -20,17 +20,15 @@ function testListCompanies () {
 
 function makeCompanyDropdown (company) {
     let dropdown = $('#company-dropdown-template > :first-child').clone()
-    dropdown.find('.collapsible').text(company.CompanyName)
+    let collapsible = dropdown.find('.collapsible')
+    let content = dropdown.find('.content')
+
+    collapsible.text(company.CompanyName)
     dropdown.find('.button').text(company.HiringStatus)
 
     dropdown.find('.collapsible').click(function () {
-        this.classList.toggle('active')
-        let content = this.nextElementSibling
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null
-        } else {
-            content.style.maxHeight = content.scrollHeight + 'px'
-        }
+        dropdown.toggleClass('active')
+        content.slideToggle()
     })
 
     return dropdown
