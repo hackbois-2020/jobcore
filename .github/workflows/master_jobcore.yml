@@ -30,4 +30,4 @@ jobs:
       with:
         app-name: 'jobcore'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a84e09abd4e94a8f97a82a4b753e4f0f }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d912f05db0e746509965c601c6babe54 }}
