@@ -5,7 +5,7 @@ function listCompanies (length, offset) {
 }
 
 function listCompanyJobs (company) {
-    return $.get('/api/jobs/' + company.CompanyName)
+    return $.get('/api/jobs/' + encodeURI(company))
 }
 
 // An example on how to use the API to get companies.
@@ -24,7 +24,7 @@ function testListCompanies () {
 
 // An example on how to use the API to get jobs.
 function testListJobs () {
-    listCompanyJobs({CompanyName:'Skipfire'})
+    listCompanyJobs('Skipfire')
         .done(function (data) {
             console.log('Success!')
             console.log(data)
@@ -34,16 +34,51 @@ function testListJobs () {
         })
 }
 
+function makeJobListing (job) {
+    let listing = $('#job-template > :first-child').clone()
+    listing.find('.job-position').text(job.JobTitle)
+    listing.find('.job-description').text(job.JobResponsibilities)
+
+    if (job.Link === null || job.Link === '' || job.Link === '_' || job.Link === '	') {
+        listing.find('.job-apply').remove()
+    } else {
+        listing.find('.job-apply').attr('href', job.Link)
+    }
+
+    return listing
+}
+
+function populateCompany (content) {
+    if (content.children().length > 0) return
+    let name = content.data('name')
+
+    listCompanyJobs(name)
+        .done(function (jobs) {
+            console.log(jobs)
+            let njobs = 0
+            for (let job of jobs) {
+                njobs++
+                if (njobs > 1) {
+                    content.append('<hr>')
+                }
+                makeJobListing(job).appendTo(content)
+            }
+        })
+        .fail(function () {
+            console.error('Request failed for company "' + name + '"')
+        })
+}
+
 function makeCompanyDropdown (company) {
     let dropdown = $('#company-dropdown-template > :first-child').clone()
     let collapsible = dropdown.find('.collapsible')
     let content = dropdown.find('.content')
 
+    content.data('name', company.CompanyName)
     collapsible.text(company.CompanyName)
 
     // Add job status
     if (company.HiringStatus === 'hiring') {
-        console.log('HIRING')
         collapsible.append('<span class="tag hiring">Hiring</span>')
     } else if (company.HiringStatus === 'hiring freeze') {
         collapsible.append('<span class="tag freeze">Hiring Frozen</span>')
@@ -51,6 +86,7 @@ function makeCompanyDropdown (company) {
 
     dropdown.find('.collapsible').click(function () {
         dropdown.toggleClass('active')
+        populateCompany(content)
         content.slideToggle()
     })
 
@@ -60,10 +96,6 @@ function makeCompanyDropdown (company) {
 $(document).ready(function () {
     let table = $('#job-table')
     let dropdownList = $('#company-dropdowns')
-
-    console.log(table)
-    console.log(table.DataTable)
-    table.DataTable()
 
     // List the first 100 companies and populate the webpage
     listCompanies(100)
