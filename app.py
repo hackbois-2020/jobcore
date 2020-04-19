@@ -15,10 +15,6 @@ def default(o):
 
 @app.route("/")
 def index():
-    content = {
-            'message': 'Lorem ipsum lol'
-    }
-
     # company status title salary
     jobs = [
             {
