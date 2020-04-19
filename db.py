@@ -1,9 +1,13 @@
+import json
+from collections import namedtuple
 from dotmap import DotMap
 import mysql.connector
 from config import Config
 
-_sql = DotMap(Config.sql)
+Company = namedtuple('COMPANY',
+    'CompanyName Modified HiringStatus Comment')
 
+_sql = DotMap(Config.sql)
 _db = mysql.connector.connect(
     host = _sql.server,
     user = _sql.username,
@@ -11,12 +15,13 @@ _db = mysql.connector.connect(
     database = _sql.database,
     ssl_ca='cert.pem'
 )
-
 _cursor = _db.cursor()
 
-def get_jobs():
-    _cursor.execute('SELECT * FROM COMPANY')
-    return _cursor.fetchall()
+def get_companies(length, offset):
+    _cursor.execute('SELECT * FROM `COMPANY` LIMIT %s OFFSET %s',
+                    (length, offset))
+
+    return [Company(*row)._asdict() for row in _cursor.fetchall()]
 
 def close_connection():
     _db.commit()
@@ -24,6 +29,5 @@ def close_connection():
     _db.close()
 
 if __name__ == '__main__':
-    for job in get_jobs():
-        print(job)
+    print(get_companies(100, 0))
     close_connection()
