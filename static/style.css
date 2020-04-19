@@ -50,7 +50,7 @@ body {
   cursor: pointer;
   border-radius: 6px;
 	background-color: #d9d1d1;
-  border-radius: 16px;
+  border-radius: 6px;
 }
 
 table{
@@ -76,4 +76,8 @@ h1{
 	text-align: center;
 	font-family: Helvetica, Arial, sans-serif;
 	text-transform: capitalize;
+}
+
+table, th, td {
+    border: 0;
 }
