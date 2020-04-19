@@ -1,8 +1,0 @@
-{
-	"sql": {
-		"server": "jobcore.database.windows.net",
-		"database": "Jobcore",
-		"username": "adminadmin@jobcore.azurewebsites.net",
-		"password": "rootrootroot42#"
-	}
-}

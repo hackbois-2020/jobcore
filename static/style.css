@@ -38,7 +38,7 @@ body {
   background-color: #f1f1f1;
 }
 
-.button { 
+.button {
   background-color: #ddd;
   border: none;
   color: black;
@@ -48,8 +48,12 @@ body {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
+<<<<<<< HEAD
   border-radius: 6px;
 	background-color: #d9d1d1;
+=======
+  border-radius: 16px;
+>>>>>>> d801ba9a641223d1d1dbc323f11a94c480af8700
 }
 
 table{
