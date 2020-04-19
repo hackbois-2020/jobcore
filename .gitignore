@@ -8,5 +8,6 @@ __pycache__/
 # Keys
 cert.pem
 key.pem
+key.pen
 
 config.json
