@@ -15,22 +15,7 @@ def default(o):
 
 @app.route("/")
 def index():
-    # company status title salary
-    jobs = [
-            {
-                'company': 'Boing',
-                'status': 'hiring',
-                'title': 'plan enginer',
-                'salary': 1
-            },
-            {
-                'company': 'Michaelsoft',
-                'status': 'hiring freeze',
-                'title': 'shiftwere dev loper',
-                'salary': 100
-            }
-    ]
-    return render_template('index.html', title='Home', jobs=jobs)
+    return render_template('index.html', title='Home')
 
 @app.route("/api/companies/<int:length>/<int:offset>")
 def companies(length, offset=0):

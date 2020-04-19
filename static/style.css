@@ -13,12 +13,17 @@ body {
 
 /*[Jay] Testing out collapsable data for Company Name*/
 
+.company-dropdown {
+    padding: 5px;
+    width: 50em;
+}
+
 .collapsible {
   background-color: #E5DFDF;
   color: black;
   cursor: pointer;
-  padding: 50x;
-  width: 60%;
+  padding: 5px;
+  width: 100%;
   border: none;
   text-align: center;
   outline: none;
@@ -33,14 +38,14 @@ body {
 .content {
   padding: 0 18px;
   max-height: 0;
-  width: 60%;
+  width: 100%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
 }
 
 .button {
-  text-align: center;   
+  text-align: center;
   background-color: #ddd;
   border: none;
   color: black;
@@ -55,31 +60,19 @@ body {
   border-radius: 6px;
 }
 
-table{
-	border-collapse: collapse;
 
-}
-
-table, th, td{
+table, th, td {
 	border: 1px solid black;
 	background-color: #d9d1d1;
 }
-.job-title tbody{
-	  display:block;
-	    overflow:auto;
-	      height:200px;
-	        width:100%;
-	}
-.job-title thead tr{
-		  display:block;
 
-}
-h1{
+h1 {
 	text-align: center;
-	font-family: Helvetica, Arial, sans-serif;
 	text-transform: capitalize;
 }
 
-table, th, td {
-  
+
+
+.template {
+    display: none;
 }
