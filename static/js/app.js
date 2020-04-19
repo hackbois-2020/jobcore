@@ -24,7 +24,14 @@ function makeCompanyDropdown (company) {
     let content = dropdown.find('.content')
 
     collapsible.text(company.CompanyName)
-    dropdown.find('.button').text(company.HiringStatus)
+
+    // Add job status
+    if (company.HiringStatus === 'hiring') {
+        console.log('HIRING')
+        collapsible.append('<span class="job-status hiring">Hiring</span>')
+    } else if (company.HiringStatus === 'hiring freeze') {
+        collapsible.append('<span class="job-status freeze">Hiring Frozen</span>')
+    }
 
     dropdown.find('.collapsible').click(function () {
         dropdown.toggleClass('active')
