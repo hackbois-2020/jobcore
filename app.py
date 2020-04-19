@@ -21,3 +21,8 @@ def index():
 def companies(length, offset=0):
     data = json.dumps(db.get_companies(length, offset), default=default)
     return Response(data, mimetype='application/json')
+
+@app.route("/api/jobs/<string:company_name>")
+def jobs(company_name):
+    data = json.dumps(db.get_jobs(company_name), default=default)
+    return Response(data, mimetype='application/json')

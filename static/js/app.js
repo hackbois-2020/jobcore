@@ -4,6 +4,10 @@ function listCompanies (length, offset) {
     return $.get('/api/companies/' + length + '/' + offset)
 }
 
+function listCompanyJobs (company) {
+    return $.get('/api/jobs/' + company.CompanyName)
+}
+
 // An example on how to use the API to get companies.
 function testListCompanies () {
     listCompanies(100) // offset is an optional argument.
@@ -14,6 +18,18 @@ function testListCompanies () {
         })
         .fail(function () {
             // Server returns some non-OK code, and we fail :(
+            console.error('Error!')
+        })
+}
+
+// An example on how to use the API to get jobs.
+function testListJobs () {
+    listCompanyJobs({CompanyName:'Skipfire'})
+        .done(function (data) {
+            console.log('Success!')
+            console.log(data)
+        })
+        .fail(function () {
             console.error('Error!')
         })
 }
