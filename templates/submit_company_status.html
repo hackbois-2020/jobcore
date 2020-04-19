@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{{title}} - Jobcore</title>
+		<!-- Dependencies -->
+
+		<!-- App -->
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+	</head>
+	<body>
+	  <h1>Submit Company Hiring Status</h1>
+          <div id="company-dropdowns">
+          </div>
+
+          <form action=""> <!--FILL WITH /ACTION THING example: "Action_page.php" -->
+          	<label for="company_Name"> Company Name: </label>
+          	<input type="text" id="company_Name">
+ <!--FILL WITH /ACTION THING example: "Action_page.php" -->
+<br><br>
+  <label for="company_status">What's the status?:  </label>
+  <select id="c_status" name="status" size="2">
+    <option value="Hiring">Hiring</option>
+    <option value="Hiring Freeze">Hiring Freeze</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+	  <!-- Dependencies -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+		  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+		  crossorigin="anonymous"></script>
+	  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+
+
+	  <!-- App -->
+	  <script src="{{url_for('static', filename='js/app.js')}}"></script>
+	</body>
+</html>
