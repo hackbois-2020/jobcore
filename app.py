@@ -30,7 +30,7 @@ def index():
                 'salary': 100
             }
     ]
-    return render_template('index.html', title='Home', content=content, jobs=jobs)
+    return render_template('index.html', title='Home', jobs=jobs)
 
 @app.route("/api/companies/<int:length>/<int:offset>")
 def companies(length, offset=0):
